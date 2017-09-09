@@ -14,7 +14,6 @@ $(document).ready(function() {
             for (var w = 0; w < name.length; w++) {
                 q.push(0);
             }
-            console.log(q);
         }
         check = function() {
             var n = document.getElementById("name").value;
@@ -35,6 +34,8 @@ $(document).ready(function() {
                     document.getElementById("demo").innerHTML = "incorrect id or name";
                 }
             }
+            document.getElementById("name").value = "";
+            document.getElementById("id").value = "";
         }
     })
 });
