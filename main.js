@@ -8,12 +8,13 @@ $(document).ready(function() {
         console.log(name);
         console.log(id);
         date = function() {
-          var f = Number(document.getElementById("dd").innerHTML)+1;
-          document.getElementById("dd").innerHTML = f;
-          for(var w=0; w<name.length; w++ )
-          {
-            q.push(0);
-          }
+            q = [];
+            var f = Number(document.getElementById("dd").innerHTML) + 1;
+            document.getElementById("dd").innerHTML = f;
+            for (var w = 0; w < name.length; w++) {
+                q.push(0);
+            }
+            console.log(q);
         }
         check = function() {
             var n = document.getElementById("name").value;
@@ -21,30 +22,28 @@ $(document).ready(function() {
             if (id.indexOf(i) == -1) {
                 document.getElementById("demo").innerHTML = "no such id";
             } else {
-                  if (id.indexOf(i) == name.indexOf(n)) {
-                    if(q[id.indexOf(i)]==0) {
-                        var j = id.indexOf(i)+1;
+                if (id.indexOf(i) == name.indexOf(n)) {
+                    if (q[id.indexOf(i)] == 0) {
+                        var j = id.indexOf(i) + 1;
                         update(j);
                         document.getElementById("demo").innerHTML = n + " is present";
-                        q[id.indexOf(i)]=1;
-                      }
-                    else {
-                      document.getElementById("demo").innerHTML = "Cannot manipulate";
+                        q[id.indexOf(i)] = 1;
+                    } else {
+                        document.getElementById("demo").innerHTML = "Cannot manipulate";
                     }
-                  } else {
-                        document.getElementById("demo").innerHTML = "incorrect id or name";
-                  }
+                } else {
+                    document.getElementById("demo").innerHTML = "incorrect id or name";
+                }
             }
         }
     })
 });
 
-function update(j)
-{
-  console.log(j);
-    var s=Number(document.getElementById(j).innerHTML)+1;
+function update(j) {
+    console.log(j);
+    var s = Number(document.getElementById(j).innerHTML) + 1;
     console.log(s);
-    document.getElementById("tt").innerHTML= Number(document.getElementById("tt").innerHTML)+1;
-    document.getElementById(j).innerHTML=s;
+    document.getElementById("tt").innerHTML = Number(document.getElementById("tt").innerHTML) + 1;
+    document.getElementById(j).innerHTML = s;
 
 }
