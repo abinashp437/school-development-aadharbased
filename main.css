@@ -1,0 +1,27 @@
+#heading {
+    font-weight: bold;
+    text-decoration: Underline;
+}
+
+table,
+tr,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    margin: auto;
+}
+
+.expense-table {
+    margin-top: 50px;
+    height: 150px;
+    width: 800px;
+}
+
+tr,
+td {
+    text-align: center;
+    padding: 10px;
+}

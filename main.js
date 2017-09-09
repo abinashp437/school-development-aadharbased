@@ -1,27 +1,38 @@
 $(document).ready(function() {
     var name = [];
     var id = [];
-    $.getJSON('main.json', function(data) {
+    $.getJSON('https://raw.githubusercontent.com/praabi/school-development-aadharbased/master/main.json', function(data) {
         name = data.name;
         id = data.id;
         console.log(name);
         console.log(id);
+        date = function() {
+          document.getElementById("dd").innerHTML = Number(document.getElementById("dd").innerHTML)+1;
+        }
         check = function() {
             var n = document.getElementById("name").value;
             var i = document.getElementById("id").value;
-            for (i = 0; i < id.length; i++) {
-                if (id.indexOf(i) == -1) {
-                    document.getElementById("demo").innerhtml = "not found";
-                    break;
-                } else {
-                    if (id.indexOf(i) == name.indexOf(n)) {
-                        document.getElementById("demo").innerhtml = n + " is present";
-                    } else {
-                        document.getElementById("demo").innerhtml = "incorrect id or name";
-                    }
-                }
-
+            if (id.indexOf(i) == -1) {
+                document.getElementById("demo").innerHTML = "no such id";
+            } else {
+                  if (id.indexOf(i) == name.indexOf(n)) {
+                        document.getElementById("demo").innerHTML = n + " is present";
+                        var j = id.indexOf(i)+1;
+                        update(j);
+                  } else {
+                        document.getElementById("demo").innerHTML = "incorrect id or name";
+                  }
             }
         }
     })
 });
+
+function update(j)
+{
+  console.log(j);
+    var s=Number(document.getElementById(j).innerHTML)+1;
+    console.log(s);
+    document.getElementById(j).innerHTML=s;
+    document.getElementById("tt").innerHTML= Number(document.getElementById("tt").innerHTML)+1;
+
+}
