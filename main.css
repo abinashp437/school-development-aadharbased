@@ -2,10 +2,17 @@
     font-weight: bold;
 }
 
+.main-heading {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #000000;
+    font-size: 20px;
+}
+
 table,
 tr,
 td {
-    border: 1px solid black;
+    border: 1px solid rgb(91, 3, 174);
     border-collapse: collapse;
 }
 
@@ -13,14 +20,30 @@ table {
     margin: auto;
 }
 
-.expense-table {
+#expense-table {
     margin-top: 50px;
+    border-width: 3px;
+    border-style: double;
+    border-color: rgb(91, 3, 174);
     height: 150px;
     width: 800px;
+    background-color: rgba(211, 211, 211, 0.32);
+}
+
+#main-row {
+    background-color: rgba(128, 128, 128, 0.65);
 }
 
 tr,
 td {
     text-align: center;
     padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(91, 3, 174);
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: rgb(91, 3, 174);
 }

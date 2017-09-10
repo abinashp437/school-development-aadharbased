@@ -2,26 +2,27 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="main.css">
+    <title>School development Aadhar based</title>
 </head>
 
-<body><br>
-    <h1 style="text-align:center;"><u><b>Aadhar based School development System</u></b>
+<body style="background-color: #FAE9FE"><br>
+    <h1><b>Aadhar based School development System</b>
     </h1>
 
     <form method="post" action=" ">
         <div style="text-align:center;">
             <input type="text" name="name" id="name" placeholder="Enter Name"><br><br>
             <input type="text" name="aadhaarId" id="id" placeholder="Enter ID "><br><br>
-            <button type="button" class="myt1" onclick="check()">Submit</button><br><br>
-            <button type="button" onclick="date()" id="dd">0</button>
+            <button type="button" class="myt1" onclick="check()">Submit</button><br>
+            <p><b>Date: </b><button type="button" onclick="date()" id="dd" style="width:50px;">0</button></p>
         </div>
-        <br><br>
+        <br>
         <div id="demo" style="text-align:center;"></div>
         <br><br>
         <table id="expense-table">
-            <tr>
-                <td id="heading"><u>Student Name</u></td>
-                <td id="heading"><u>Attendance</u></td>
+            <tr id="main-row">
+                <td class="main-heading">Student Name</td>
+                <td class="main-heading">Attendance</td>
             </tr>
             <tr>
                 <td id="heading">Wolfgang Yerrington</td>
@@ -63,9 +64,9 @@
                 <td id="heading">Shanna Staddart</td>
                 <td id="10">0</td>
             </tr>
-            <tr>
-                <td id="heading"><u>Total MDM</u></td>
-                <td id="tt">0</td>
+            <tr id="main-row">
+                <td class="main-heading">Total MDM</td>
+                <td id="tt" class="main-heading" style="text-decoration:none;">0</td>
             </tr>
         </table>
     </form>
