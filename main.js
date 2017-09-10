@@ -3,7 +3,7 @@ $(document).ready(function() {
     var id = [];
     var gender = [];
     var q = [];
-    $.getJSON('https://raw.githubusercontent.com/Deepak345/sample-json/master/sample.json', function(data) {
+    $.getJSON('https://raw.githubusercontent.com/Deepak345/school-development-aadharbased/master/sample.json', function(data) {
         name = data.name;
         id = data.id;
         gender = data.gender;
@@ -11,6 +11,7 @@ $(document).ready(function() {
         console.log(id);
         date = function() {
             q = [];
+            document.getElementById("demo").innerHTML = " ";
             var f = Number(document.getElementById("dd").innerHTML) + 1;
             document.getElementById("dd").innerHTML = f;
             for (var w = 0; w < name.length; w++) {
@@ -21,6 +22,7 @@ $(document).ready(function() {
         check = function() {
             var n = document.getElementById("name").value;
             var i = document.getElementById("id").value;
+            document.getElementById("demo").innerHTML = " ";
             if (id.indexOf(i) == -1) {
                 alert("no such id");
             } else {
