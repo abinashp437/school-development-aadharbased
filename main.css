@@ -47,3 +47,29 @@ h1 {
     text-decoration-style: double;
     text-decoration-color: rgb(91, 3, 174);
 }
+
+.myt1 {
+    width: 75px;
+    border-radius: 10px;
+    border-width: 3px;
+    padding: 3px;
+    background-color: #F0B5FF;
+    transition: width 0.75s;
+    font-size: 16px;
+}
+
+#dd {
+    width: 40px;
+    border-radius: 8px;
+    background-color: #E8D9EC;
+    transition: background-color 0.5s;
+}
+
+.myt1:hover {
+    background-color: #B387BF;
+    width: 85px;
+}
+
+#dd:hover {
+    background-color: #D0BFD4;
+}
